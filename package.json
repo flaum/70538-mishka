@@ -1,0 +1,24 @@
+{
+  "name": "70538-mishka",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Личный проект «Мишка» от HTML Academy",
+  "author": "Sergei Kutsev",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:htmlacademy-adaptive/70538-mishka.git"
+  },
+  "bugs": {
+    "url": "https://github.com/htmlacademy-adaptive/70538-mishka/issues"
+  },
+  "homepage": "https://github.com/htmlacademy-adaptive/70538-mishka",
+  "devDependencies": {
+    "editorconfig-tools": "0.1.1"
+  },
+  "scripts": {
+    "test": "editorconfig-tools check *"
+  },
+  "engines": {
+    "node": "5.11"
+  }
+}

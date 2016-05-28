@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Вязание на заказ</title>
+	</head>
+	<body>
+		<header class="page-header">
+			<div class="logo">
+				<a href="index.html"><img src="http://placehold.it/86x35" width="86" height="35" alt="Мишка - магазин изделий ручной работы"></a>
+			</div>
+			<a class="main-nav__open-toggle" href="#">Открыть меню</a>
+			<a class="main-nav__close-toggle" href="#">Закрыть меню</a>
+      <nav class="main-nav">
+        <ul class="main-nav__list  main-nav__list--closed">
+          <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
+          <li class="main-nav__item  main-nav__item--search"><a href="#">Поиск по сайту</a></li>
+          <li class="main-nav__item  main-nav__item--cart"><a href="#">Корзина: пока пуста</a></li>
+        </ul>
+      </nav>
+		</header>
+		<main>
+			<div class="page-title  page-title--form">
+				<h1>Вязание на заказ</h1>
+			</div>
+			<form class="order-form" action="https://echo.htmlacademy.ru" method="post">
+				<p class="order-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, что бы уточнить детали.</p>
+				<div class="order-form__item">
+					<div class="order-form__item-name">
+						<span>Тип</span>
+					</div>
+					<div class="order-form__options  order-form__options--type">
+						<input type="radio" name="type" id="type-home" value="Home accessories" checked>
+						<label for="type-home">Аксессуар для интерьера</label>
+						<input type="radio" name="type" id="type-toy" value="Toys">
+						<label for="type-toy">Детская игрушка</label>
+					</div>
+				</div>
+				<div class="order-form__item">
+					<div class="order-form__item-name">
+						<span>Цвет</span>
+					</div>
+					<div class="order-form__options  order-form__options--color">
+						<input type="checkbox" name="white" id="white" checked>
+						<label for="white">Белый</label>
+						<input type="checkbox" name="grey" id="grey" checked>
+						<label for="grey">Серый</label>
+						<input type="checkbox" name="tiffany" id="tiffany">
+						<label for="tiffany">&laquo;Тиффани&raquo;</label>
+						<input type="checkbox" name="pink" id="pink">
+						<label for="pink">Розовый</label>
+						<input type="checkbox" name="orange" id="orange">
+						<label for="orange">Оранжевый</label>
+					</div>
+				</div>
+				<div class="order-form__item">
+					<div class="order-form__item-name">
+						<span>Фио</span>
+					</div>
+					<div class="order-form__options order-form__options--full-name">
+						<label for="surname">Фамилия:</label>
+						<input type="text" name="surname" id="surname" placeholder="Укажите фамилию" required>
+						<label for="name">Имя:</label>
+						<input type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+						<label for="fathers-name">Отчество:</label>
+						<input type="text" name="fathers-name" id="fathers-name" placeholder="Отчество, если желаете">
+					</div>
+				</div>
+				<div class="order-form__item">
+					<div class="order-form__item-name">
+						<span>Тел</span>
+					</div>
+					<div class="order-form__options order-form__options--phone-num">
+						<input type="tel" name="phone-number" pattern="[+]{1}[0-9]{1} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 XXX XX XX" required><!-- Не уверен что тут нужен этот паттерн -->
+					</div>
+				</div>
+				<div class="order-form__item">
+					<div class="order-form__item-name">
+						<span>E-mail</span>
+					</div>
+					<input type="email" name="e-mail" placeholder="Ваш e-mail" required>
+				</div>
+				<div class="order-form__item">
+					<div class="order-form__item-name">
+						<span>Доп</span>
+					</div>
+					<textarea name="more-info" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+				</div>
+				<button class="order-form__send  btn" type="submit">Отправить заказ</button>
+			</form>
+		</main>
+		<footer class="page-footer">
+			<div class="page-footer__social-links">
+				<a class="page-footer__social-link  page-footer__social-link--insta" href="#">Мы в Instagram</a>
+				<a class="page-footer__social-link  page-footer__social-link--fb" href="#">Мы в Facebook</a>
+				<a class="page-footer__social-link  page-footer__social-link--tw" href="#">Мы в Twitter</a>
+			</div>
+			<div class="page-footer__developer">
+				<span>Разработано</span>
+				<a class="page-footer__copyright-link" href="https://htmlacademy.ru">HTML Academy</a>
+			</div>
+		</footer>
+	</body>
+</html>

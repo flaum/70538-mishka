@@ -1,0 +1,40 @@
+.order-form {
+	margin-top: 30px;
+}
+
+.order-form__description {
+	margin: 0;
+	margin-bottom: 27px;
+	font-size: 14px;
+	color: @darkgrey;
+}
+
+.order-form__item {
+	margin-bottom: 31px;
+}
+
+.order-form__item-name {
+	position: relative;
+	margin-bottom: 23px;
+	span {
+		font-weight: bold;
+		text-transform: uppercase;
+		color: @aqua;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 11.5px;
+		left: 62px;
+		width: 198px;
+		height: 1px;
+		background: @aqua;
+	}
+}
+
+.order-form__options {
+	label {
+		font-weight: bold;
+		line-height: 18px;
+	}
+}

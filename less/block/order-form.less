@@ -15,7 +15,6 @@
 
 .order-form__item-name {
 	position: relative;
-	margin-bottom: 23px;
 	span {
 		font-weight: bold;
 		text-transform: uppercase;
@@ -30,11 +29,122 @@
 		height: 1px;
 		background: @aqua;
 	}
+	&--margined {
+		margin-bottom: 23px;
+	}
 }
 
 .order-form__options {
 	label {
+		position: relative;
 		font-weight: bold;
 		line-height: 18px;
 	}
+	input {
+		padding-top: 17px;
+		padding-bottom: 17px;
+		margin-bottom: 25px;
+		background: transparent;
+		border: none;
+		border-bottom: 2px solid @black;
+		outline: none;
+	}
+	textarea {
+		border: 2px solid @darkgrey;
+		padding: 15px;
+	}
+	input::-webkit-input-placeholder,
+	textarea::-webkit-input-placeholder {
+		color: @placeholdercolor;
+	}
+	input::-moz-placeholder,
+	textarea::-moz-placeholder {
+		color: @placeholdercolor;
+	}
+	input:-moz-placeholder,
+	textarea:-moz-placeholder {
+		clolor: @placeholdercolor;
+	}
+	input:-ms-input-placeholder,
+	textarea:-ms-input-placeholder {
+		color: @placeholdercolor;
+	}
+	&--type {
+		margin-bottom: 33px;
+		input {
+			display: none;
+		}
+		label {
+			display: block;
+			padding-left: 62px;
+			margin-bottom: 22px;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 40px;
+				height: 41px;
+				border: 2px solid @darkgrey;
+				border-radius: 50%;
+				box-sizing: border-box;
+			}
+			&:hover {
+				cursor: pointer;
+			}
+		}
+		input:checked + label:after {
+			content: "";
+			position: absolute;
+			top: 12px;
+			left: 12px;
+			width: 16px;
+			height: 17px;
+			background: @aqua;
+			border-radius: 50%;
+		}
+	}
+	&--color {
+		margin-bottom: 33px;
+		input {
+			display: none;
+		}
+		label {
+			display: block;
+			padding-left: 62px;
+			padding-top: 11.5px;
+			padding-bottom: 11.5px;
+			margin-bottom: 22px;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 40px;
+				height: 41px;
+				border: 2px solid @darkgrey;
+				box-sizing: border-box;
+			}
+		}
+		input:checked + label:after {
+			content: "";
+			position: absolute;
+			top: 12px;
+			left: 9px;
+			width: 22px;
+			height: 17px;
+			background: url("../img/icon-tick.svg") no-repeat 50% 50%;
+			background-size: 22px 17px;
+		}
+	}
+	&--full-name {
+		label {
+			display: block;
+		}
+	}
+}
+
+.order-form__send {
+	background: @white;
+	outline: none;
 }

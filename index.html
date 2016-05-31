@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Мишка: Главная страница</title>
+		<link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
 			<div class="logo">
-				<img src="http://placehold.it/86x35" width="86" height="35" alt="Мишка - магазин изделий ручной работы">
+				<img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка - магазин изделий ручной работы">
 			</div>
-			<a class="main-nav__open-toggle" href="#">Открыть меню</a>
-			<a class="main-nav__close-toggle" href="#">Закрыть меню</a>
+			<a class="page-header__open-toggle" href="#">Открыть меню</a>
+			<a class="page-header__close-toggle" href="#">Закрыть меню</a>
       <nav class="main-nav">
         <ul class="main-nav__list  main-nav__list--closed">
           <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
@@ -27,84 +29,88 @@
           <h2 class="description__title">Милые штуки ручной работы для дома</h2>
         </div>
         <ul class="description__types-list">
-          <li class="description__type  descriprtion__type--home-goods"><a href="">Предметы интерьера</a></li>
-          <li class="description__type  descriprtion__type--toys"><a href="">Детские игрушки</a></li>
+          <li class="description__type  description__type--home-goods"><a href="">Предметы интерьера</a></li>
+          <li class="description__type  description__type--toys"><a href="">Детские игрушки</a></li>
         </ul>
       </section>
     </header>
     <main class="index-main">
       <article class="product-best">
-        <h1 class="product-best__title">Вязаные корзинки</h1>
-        <span class="product-best__week-best">Товар недели</span>
-        <p class="produc-bestt__descriprtion">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+				<div class="product-best__header">
+        	<h1 class="product-best__title">Вязаные корзинки</h1>
+        	<span class="product-best__week-best">Товар недели</span>
+				</div>
+        <p class="product-best__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
         <table class="product-best__specifications-list">
           <tr class="product-best__specification">
-						<td>Цвет:</td>
-						<td>&laquo;Тиффани&raquo;серый&frasl;</td>
+						<td class="product-best__options">Цвет:</td>
+						<td class="product-best__value">&laquo;Тиффани&raquo;&frasl;серый</td>
 					</tr>
-          <tr>
-						<td class="product__options">Диаметр:</td>
-						<td class="product__value">25 см</td>
+          <tr class="product-best__specification">
+						<td class="product-best__options">Диаметр:</td>
+						<td class="product-best__value">25 см</td>
 					</tr>
-          <tr>
-						<td class="product__options">Высота:</td>
-						<td class="product__value">15 см</td>
+          <tr class="product-best__specification">
+						<td class="product-best__options">Высота:</td>
+						<td class="product-best__value">15 см</td>
 					</tr>
         </table>
-        <div class="product__photo">
-          <img src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
+        <div class="product-best__photo">
+          <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
         </div>
-        <span class="product__price">Цена: 900 руб.</span>
-        <a class="product__order btn" href="#">Заказать</a>
+        <span class="product-best__price">Цена: 900 руб.</span>
+        <a class="product-best__order btn" href="#">Заказать</a>
       </article>
-      <section class="advanteges">
-        <h2 class="advanteges__title">Коротко о нас:</h2>
-        <ul class="advanteges__list">
-          <li class="advanteges__item  advanteges__item--ecology">Экологически чистые материалы</li>
-          <li class="advanteges__item  advanteges__item--scandinavian">Скандинавский стиль по российской цене</li>
-          <li class="advanteges__item  advanteges__item--likes">Увеличивает лайки на фотографиях</li>
-          <li class="advanteges__item  advanteges__item--handemade">Связано вручную с любовью и умилением</li>
-          <li class="advanteges__item  advanteges__item--domestic">Поддержка отечественного производителя</li>
-          <li class="advanteges__item  advanteges__item--pack">Доставляется в подарочной упаковке</li>
+      <section class="advantages">
+        <h2 class="advantages__title">Коротко о нас:</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item  advantages__item--ecology">Экологически чистые материалы</li>
+          <li class="advantages__item  advantages__item--scandinavian">Скандинавский стиль по российской цене</li>
+          <li class="advantages__item  advantages__item--likes">Увеличивает лайки на фотографиях</li>
+          <li class="advantages__item  advantages__item--handemade">Связано вручную с любовью и умилением</li>
+          <li class="advantages__item  advantages__item--domestic">Поддержка отечественного производителя</li>
+          <li class="advantages__item  advantages__item--pack">Доставляется в подарочной упаковке</li>
         </ul>
       </section>
       <section class="reviews">
-        <h2 class="rewiews__title">Отзывы:</h2>
-        <div class="rewiews__list">
-          <blockquote class="rewiews__item">
-            <p>Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
-            <cite class="rewiews__author-name">Анастасия Красильникова</cite>
-            <span class="rewiews__insta-name">@misssssiskras</span>
+        <h2 class="reviews__title">Отзывы</h2>
+        <div class="reviews__list">
+          <blockquote class="reviews__item">
+            <p class="reviews__text">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
+            <cite class="reviews__author-name">Анастасия Красильникова</cite>
+            <span class="reviews__insta-name">@misssssiskras</span>
           </blockquote>
-					<blockquote class="rewiews__item">
-            <p></p>
-            <cite class="rewiews__author-name"></cite>
-            <span class="rewiews__insta-name"></span>
+					<blockquote class="reviews__item">
+            <p class="reviews__text"></p>
+            <cite class="reviews__author-name"></cite>
+            <span class="reviews__insta-name"></span>
           </blockquote>
-					<blockquote class="rewiews__item">
-            <p></p>
-            <cite class="rewiews__author-name"></cite>
-            <span class="rewiews__insta-name"></span>
+					<blockquote class="reviews__item">
+            <p class="reviews__text"></p>
+            <cite class="reviews__author-name"></cite>
+            <span class="reviews__insta-name"></span>
           </blockquote>
         </div>
-        <div class="rewiews__btns">
-          <a class="rewiews__prev" href="#"><img src="http://placehold.it/50x26" width="50" height="26" alt="Previous arrow"></a>
-          <a class="rewiews__next" href="#"><img src="http://placehold.it/50x26" width="50" height="26" alt="Next arrow"></a>
+        <div class="reviews__nav-btns">
+          <a class="reviews__nav-btn  reviews__nav-btn--prev" href="#"><img src="img/icon-left-arrow.svg" width="50" height="26" alt="Previous arrow">Предидущий отзыв</a>
+          <a class="reviews__nav-btn  reviews__nav-btn--next" href="#"><img src="img/icon-right-arrow.svg" width="50" height="26" alt="Next arrow">Следующий отзыв</a>
         </div>
-        <a class="rewiews__write  btn" href="#">Написать</a>
+        <a class="reviews__write  btn" href="#">Написать</a>
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
-        <div class="contacts__e-mail">
-          <p class="contacts__item  contacts__item--name">e-mail:</p>
-          <p class="contacts__item  contacts__item--value"><span class="contacts__item-value--underline">info@mimimishkashop</span>.ru</p>
+				<div class="contacts__main-info">
+	        <div class="contacts__e-mail">
+	          <p class="contacts__item  contacts__item--name">e-mail:</p>
+	          <p class="contacts__item  contacts__item--value"><span class="contacts__item--underline">info@mimimishkashop</span>.ru</p>
+					</div>
+					<div class="contacts__address">
+						<p class="contacts__item  contacts__item--name">адрес:</p>
+	          <p class="contacts__item  contacts__item--value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, оф. 101</p>
+	        </div>
 				</div>
-				<div class="contacts__address">
-					<p class="contacts__item  contacts__item--name">адрес:</p>
-          <p class="contacts__item  contacts__item--value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, оф. 101</p>
-        </div>
         <div class="contacts__map">
-          <img src="http://placehold.it/320x457" width="320" height="457" alt="Карта местонахождения берлоги Мишки">
+          <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта местонахождения берлоги Мишки">
         </div>
         <a class="contacts__write-us btn">Напишите нам</a>
       </section>

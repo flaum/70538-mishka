@@ -1,0 +1,40 @@
+.advantages {
+	padding-top: 30px;
+	padding-bottom: 32px;
+}
+
+.advantages__title {
+	margin: 0;
+	margin-bottom: 30px;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.advantages__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.advantages__item {
+	position: relative;
+	padding-top: 55px;
+	font-weight: bold;
+	&:not(:last-child) {
+		padding-bottom: 35px;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 10px;
+	}
+	&--ecology::before {
+		width: 32px;
+		height: 37px;
+		background: @aqua;
+		background-size: 32px 37px;
+		mask: url("../img/icon-feature-1.svg") no-repeat 50% 50%;
+	}
+}

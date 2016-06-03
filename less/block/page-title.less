@@ -1,12 +1,28 @@
 .page-title {
+	.container();
+
 	padding-top: 73px;
 	padding-bottom: 73px;
 	margin-bottom: 30px;
+	text-align: center;
 	background: @smokywhite;
+
 	h1 {
 		margin: 0;
 		font-size: 24px;
 		line-height: 30px;
 		font-weight: bold;
+	}
+}
+
+@media @tablet-width {
+	.page-title {
+		margin-top: -78px;
+	}
+}
+
+@media @desktop-width {
+	.page-title {
+		margin-top: -70px;
 	}
 }

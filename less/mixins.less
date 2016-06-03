@@ -28,10 +28,18 @@ body {
 	margin: 0 auto;
 
 	@media @tablet-width {
-		width: 668px;
+		width: 768px;
 	}
 
 	@media @desktop-width {
-		width: 1050px;
+		width: 1150px;
+	}
+}
+
+.clearfix() {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
 	}
 }

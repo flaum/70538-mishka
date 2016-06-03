@@ -1,5 +1,5 @@
 body {
-	width: 320px;
+	// width: 320px;
 	font-family: "OpenSans", Arial, sans-serif;
 	font-size: 16px;
 	line-height: 24px;
@@ -21,4 +21,17 @@ body {
 	text-transform: uppercase;
 	color: @darkgrey;
 	border: 2px solid @darkgrey;
+}
+
+.container() {
+	width: 320px;
+	margin: 0 auto;
+
+	@media @tablet-width {
+		width: 668px;
+	}
+
+	@media @desktop-width {
+		width: 1050px;
+	}
 }

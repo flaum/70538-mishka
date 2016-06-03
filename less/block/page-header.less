@@ -1,5 +1,23 @@
+.page-header {
+	position: relative;
+}
+
+.page-header__logo {
+	padding-top: 19.5px;
+	padding-bottom: 19.5px;
+	border-top: 1px solid @lightgrey;
+	border-bottom: 1px solid @lightgrey;
+
+	img {
+		display: block;
+		width: 86px;
+		height: 35px;
+		margin: 0 auto;
+	}
+}
+
 .page-header__open-toggle {
-	display: block;
+	position: absolute;
 	width: 20px;
 	height: 14px;
 	font-size: 0;
@@ -8,9 +26,25 @@
 }
 
 .page-header__close-toggle {
-	display: block;
+	position: absolute;
 	width: 21px;
 	height: 20px;
 	font-size: 0;
 	background: url("../img/icon-menu-close.svg") no-repeat 50% 50%;
 	background-size: 21px 20px;}
+
+.page-header__interest-list {
+	display: none;
+}
+
+.page-header__delivery {
+	display: none;
+}
+
+@media @tablet-width {
+	.page-header__logo {
+		display: inline-block;
+		width: 370px;
+		border-top: none;
+	}
+}

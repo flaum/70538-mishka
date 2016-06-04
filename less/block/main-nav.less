@@ -12,6 +12,14 @@
 	justify-content: center;
 	border-bottom: 1px solid @lightgrey;
 
+	&--logo {
+		width: 320px;
+		padding-top: 21.5px;
+		padding-bottom: 21.5px;
+		border-top: 1px solid @lightgrey;
+		border-bottom: 1px solid @lightgrey;
+	}
+
 	a {
 		padding-top: 27px;
 		padding-bottom: 27px;
@@ -23,29 +31,35 @@
 
 @media @tablet-width {
 	.main-nav__list {
-		display: flex;
+		justify-content: flex-start;
 		flex-direction: row;
-		align-items: flex-start;
-		width: 718px;
-		padding-left: 50px;
+		flex-wrap: wrap;
+		width: 768px;
+		// padding-left: 50px;
 	}
 
 	.main-nav__item {
+		justify-content: flex-start;
 		font-size: 16px;
-		text-align: left;
 		border-bottom: none;
 
 		a {
 			width: 152px;
-			vertical-align: top;
 		}
 
-		&:first-child {
-			margin-right: 16px;
+		&--logo {
+			order: -3;
+			width: 320px;
+			padding-top: 26.5px;
+			padding-bottom: 26.5px;
+			padding-left: 48px;
+			border-top: none;
+			border-bottom: 1px solid @lightgrey;
 		}
 
 		&--search {
-			margin-top: -89px;
+			// margin-top: -89px;
+			order: -2;
 			font-size: 0;
 			border: 1px solid @lightgrey;
 			border-top: none;
@@ -58,7 +72,8 @@
 		}
 
 		&--cart {
-			margin-top: -89px;
+			// margin-top: -89px;
+			order: -1;
 			border-bottom: 1px solid @lightgrey;
 
 			a {
@@ -66,8 +81,12 @@
 				padding-top: 32px;
 				padding-left: 77px;
 				padding-bottom: 32px;
-				box-sizing: border-box;
 			}
+		}
+
+		&:nth-child(2) {
+			padding-left: 50px;
+			margin-right: 16px;
 		}
 	}
 }
@@ -75,31 +94,28 @@
 @media @desktop-width {
 	.main-nav__list {
 		width: 1150px;
-		padding: 0;
 		border-bottom: 1px solid @lightgrey;
 	}
 
 	.main-nav__item {
-		margin-top: -88px;
+		// margin-top: -88px;
 
 		a {
 			width: 238px;
 			padding-top: 32px;
 			padding-bottom: 32px;
-			box-sizing: border-box;
 		}
 
-		&:first-child {
-			margin-right: 35px;
-			border-right: 1px solid @lightgrey;
-
-			a {
-				padding-left: 50px;
-			}
+		&--logo {
+			order: 1;
+			width: auto;
+			padding-left: 0;
+			margin-right: 160px;
+			border-bottom: none;
 		}
 
 		&--search {
-			margin-left: 238px;
+			order: 2;
 			border-bottom: none;
 
 			a {
@@ -108,10 +124,23 @@
 		}
 
 		&--cart {
+			order: 3;
+			border-bottom: none;
 
 			a {
 				width: 316px;
-				border-bottom: none;
+			}
+		}
+
+		&:nth-child(2) {
+			margin-right: 35px;
+			border-right: 1px solid @lightgrey;
+		}
+
+		&:nth-child(3) {
+
+			a {
+				width: 180px;
 			}
 		}
 	}

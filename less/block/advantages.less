@@ -1,6 +1,9 @@
 .advantages {
-	padding-top: 30px;
-	padding-bottom: 32px;
+	.container();
+
+	display: flex;
+	flex-direction: column;
+	padding: 30px 30px 32px 30px
 }
 
 .advantages__title {
@@ -12,6 +15,8 @@
 }
 
 .advantages__list {
+	display: flex;
+	flex-direction: column;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -21,20 +26,86 @@
 	position: relative;
 	padding-top: 55px;
 	font-weight: bold;
+
 	&:not(:last-child) {
 		padding-bottom: 35px;
 	}
+
 	&::before {
 		content: "";
 		position: absolute;
 		top: 0;
 		left: 10px;
 	}
+
 	&--ecology::before {
 		width: 32px;
 		height: 37px;
 		background: @aqua;
 		background-size: 32px 37px;
 		mask: url("../img/icon-feature-1.svg") no-repeat 50% 50%;
+	}
+}
+
+@media @tablet-width {
+	.advantages {
+		padding-left: 48px;
+	}
+
+	.advantages__title {
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+	.advantages__list {
+		flex-direction: row;
+		flex-wrap: wrap;
+		// justify-content: space-between;
+		font-size: 20px;
+	}
+
+	.advantages__item {
+		width: 256px;
+
+		&--ecology {
+			order: 1;
+		}
+
+		&--scandinavian {
+			order: 3;
+		}
+
+		&--likes {
+			order: 5;
+		}
+
+		&--handemade {
+			order: 2;
+		}
+
+		&--domestic {
+			order: 4;
+		}
+
+		&--pack {
+			order: 6;
+		}
+
+		&:not(:nth-child(n+4)) {
+			margin-right: 77px;
+		}
+	}
+}
+
+@media @desktop-width {
+	.advantages {
+		padding-left: 225px;
+	}
+
+	.advantages__item {
+
+		&:not(:nth-child(n+4)) {
+			margin-right: 94px;
+		}
 	}
 }

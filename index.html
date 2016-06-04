@@ -3,18 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Мишка: Главная страница</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-			<div class="page-header__logo  logo">
+			<!-- <div class="page-header__logo  logo">
 				<img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка - магазин изделий ручной работы">
-			</div>
+			</div> -->
 			<a class="page-header__open-toggle" href="#">Открыть меню</a>
 			<a class="page-header__close-toggle" href="#">Закрыть меню</a>
       <nav class="main-nav">
         <ul class="main-nav__list  main-nav__list--closed">
+					<li class="main-nav__item  main-nav__item--logo  logo"><img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка - магазин изделий ручной работы"></li>
           <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
           <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
           <li class="main-nav__item  main-nav__item--search"><a href="#">Поиск по сайту</a></li>
@@ -76,7 +78,7 @@
           <li class="advantages__item  advantages__item--likes">Увеличивает лайки на фотографиях</li>
           <li class="advantages__item  advantages__item--handemade">Связано вручную с любовью и умилением</li>
           <li class="advantages__item  advantages__item--domestic">Поддержка отечественного производителя</li>
-          <li class="advantages__item  advantages__item--pack">Доставляется в подарочной упаковке</li>
+          <li class="advantages__item  advantages__item--pack">Поставляется в подарочной упаковке</li>
         </ul>
       </section>
       <section class="reviews">
@@ -102,7 +104,7 @@
           <a class="reviews__nav-btn  reviews__nav-btn--prev" href="#"><img src="img/icon-left-arrow.svg" width="50" height="26" alt="Previous arrow">Предидущий отзыв</a>
           <a class="reviews__nav-btn  reviews__nav-btn--next" href="#"><img src="img/icon-right-arrow.svg" width="50" height="26" alt="Next arrow">Следующий отзыв</a>
         </div>
-        <a class="reviews__write  btn" href="#">Написать</a>
+        <a class="reviews__write-btn  btn" href="#">Написать</a>
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
@@ -119,19 +121,24 @@
         <div class="contacts__map">
           <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта местонахождения берлоги Мишки">
         </div>
-        <a class="contacts__write-us btn">Напишите нам</a>
+        <a class="contacts__write-us-btn btn" href="#">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__social-links">
-        <a class="page-footer__social-link  page-footer__social-link--insta" href="#">Мы в Instagram</a>
-        <a class="page-footer__social-link  page-footer__social-link--fb" href="#">Мы в Facebook</a>
-        <a class="page-footer__social-link  page-footer__social-link--tw" href="#">Мы в Twitter</a>
-      </div>
-      <div class="page-footer__developer">
-        <span>Разработано</span>
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru">HTML Academy</a>
-      </div>
+			<div class="page-footer__wrapper">
+				<div class="page-footer__logo  logo">
+					<img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка - магазин изделий ручной работы">
+				</div>
+	      <div class="page-footer__social-links">
+	        <a class="page-footer__social-link  page-footer__social-link--insta" href="#">Мы в Instagram</a>
+	        <a class="page-footer__social-link  page-footer__social-link--fb" href="#">Мы в Facebook</a>
+	        <a class="page-footer__social-link  page-footer__social-link--tw" href="#">Мы в Twitter</a>
+	      </div>
+	      <div class="page-footer__developer">
+	        <span>Разработано</span>
+	        <a class="page-footer__copyright-link" href="https://htmlacademy.ru">HTML Academy</a>
+	      </div>
+			</div>
     </footer>
   </body>
 </html>

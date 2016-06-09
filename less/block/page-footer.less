@@ -3,12 +3,11 @@
 }
 
 .page-footer__wrapper {
-	.container();
+	.container-adaptive();
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 24px;
 	padding-bottom: 27.5px;
 }
 
@@ -21,14 +20,17 @@
 	justify-content: center;
 	align-items: center;
 	width: 260px;
-	padding-bottom: 24px;
-	border-bottom: 1px solid @lightgrey;
+	padding-top: 26px;
+	padding-bottom: 26px;
+	border-bottom: 1px solid #e5e5e5;
 }
 
 .page-footer__social-link {
 	display: block;
+	padding-right: 43px;
 	font-size: 0;
 	line-height: 0;
+	box-sizing: content-box;
 
 	&--insta {
 		width: 22px;
@@ -40,6 +42,7 @@
 	&--fb {
 		width: 15px;
 		height: 28px;
+		padding-right: 35px;
 		background: url("../img/icon-fb.svg") no-repeat 50% 50%;
 		background-size: 15px 28px;
 	}
@@ -47,24 +50,22 @@
 	&--tw {
 		width: 23px;
 		height: 20px;
+		padding-right: 54px;
 		background: url("../img/icon-twitter.svg") no-repeat 50% 50%;
 		background-size: 23px 20px;
-	}
-
-	&:not(:last-child) {
-		margin-right: 41px;
 	}
 }
 
 .page-footer__developer {
 	display: flex;
 	align-items: center;
-	padding-top: 27.5px;
+	padding-top: 19px;
 
 	span {
+		font-family: Verdana, Arial, sans-serif;
 		font-size: 18px;
 		font-weight: bold;
-		margin-right: 15px;
+		padding-right: 23px;
 	}
 }
 
@@ -82,18 +83,24 @@
 	.page-footer__wrapper {
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		padding: 54px 50px 54px 48px;
 	}
 
 	.page-footer__logo {
-		display: block;
+		display: flex;
 	}
 
 	.page-footer__social-links {
 		width: auto;
+		padding-top: 3px;
+		padding-left: 100px;
 		padding-bottom: 0;
 		border-bottom: none;
+	}
+
+	.page-footer__social-link {
+		// padding-right: 0;
 	}
 
 	.page-footer__developer {
@@ -103,7 +110,7 @@
 
 @media @desktop-width {
 	.page-footer__wrapper {
-		padding-left: 50px;
+		padding-left: 51px;
 		padding-right: 51px;
 	}
 }

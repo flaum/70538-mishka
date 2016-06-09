@@ -1,11 +1,14 @@
 .description {
-	min-width: 320px;
 	background: #f9f9f9;
 }
 
 .description__wrapper {
+	.container-adaptive();
+
 	display: flex;
 	flex-direction: column;
+	max-width: 500px;
+	margin: 0 auto;
 }
 
 .description__header {
@@ -18,12 +21,9 @@
 }
 
 .description__title {
+	.title();
+
 	width: 240px;
-	margin: 0;
-	font-family: Verdana, Arial, sans-serif;
-	font-size: 24px;
-	font-weight: bold;
-	line-height: 30px;
 	text-align: center;
 }
 
@@ -86,7 +86,6 @@
 @media @tablet-width {
 	.description__wrapper {
 		z-index: 1;
-		min-width: 768px;
 		margin-top: -60px;
 	}
 
@@ -97,8 +96,6 @@
 
 	.description__title {
 		width: 500px;
-		font-size: 40px;
-		line-height: 50px;
 
 		br {
 			display: none;
@@ -135,7 +132,5 @@
 
 	.description__title	{
 		width: 690px;
-		font-size: 50px;
-		line-height: 57px;
 	}
 }

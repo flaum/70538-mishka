@@ -1,17 +1,15 @@
 .advantages {
-	.container();
+	.container-adaptive();
 
 	display: flex;
 	flex-direction: column;
-	padding: 30px 30px 32px 30px
+	padding-left: 8.6%;
 }
 
 .advantages__title {
-	margin: 0;
-	margin-bottom: 30px;
-	font-size: 24px;
-	line-height: 30px;
-	font-weight: bold;
+	.title();
+
+	padding-top: 31px;
 }
 
 .advantages__list {
@@ -19,16 +17,23 @@
 	flex-direction: column;
 	margin: 0;
 	padding: 0;
+	padding-top: 29px;
+	padding-left: 2px;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: bold;
+	line-height: 20px;
 	list-style: none;
 }
 
 .advantages__item {
 	position: relative;
+	width: 75%;
 	padding-top: 55px;
+	padding-bottom: 28px;
 	font-weight: bold;
 
-	&:not(:last-child) {
-		padding-bottom: 35px;
+	&:last-child {
+		padding-bottom: 0;
 	}
 
 	&::before {
@@ -38,74 +43,113 @@
 		left: 10px;
 	}
 
-	&--ecology::before {
-		width: 32px;
-		height: 37px;
-		background: @aqua;
-		background-size: 32px 37px;
-		mask: url("../img/icon-feature-1.svg") no-repeat 50% 50%;
+	&--ecology {
+		width: 63%;
+
+		&::before{
+			top: 2px;
+			left: 8px;
+			width: 32px;
+			height: 37px;
+			background: @aqua;
+			background-size: 32px 37px;
+			mask: url("../img/icon-feature-1.svg") no-repeat 50% 50%;
+		}
+	}
+
+	&--likes {
+		width: 65%;
+	}
+
+	&--domestic {
+		width: 90%;
 	}
 }
 
 @media @tablet-width {
 	.advantages {
-		padding-left: 48px;
+		padding-left: 46px;
+		padding-bottom: 21px;
 	}
 
 	.advantages__title {
-		font-size: 40px;
-		line-height: 50px;
+		padding-top: 48px;
 	}
 
 	.advantages__list {
 		flex-direction: row;
 		flex-wrap: wrap;
-		// justify-content: space-between;
+		padding-top: 47px;
+		padding-left: 4px;
 		font-size: 20px;
+		line-height: 25px;
 	}
 
 	.advantages__item {
-		width: 256px;
+		width: 46.5%;
+		padding-bottom: 50px;
+
+		&:last-child {
+			padding-bottom: 50px;
+		}
 
 		&--ecology {
-			order: 1;
+			order: -6;
+			padding-right: 100px;
+
+			&::before {
+					top: 3px;
+					left: 9px;
+			}
 		}
 
 		&--scandinavian {
-			order: 3;
+			order: -4;
+			padding-right: 50px;
 		}
 
 		&--likes {
-			order: 5;
+			order: -2;
+			padding-right: 90px;
 		}
 
 		&--handemade {
-			order: 2;
+			order: -5;
 		}
 
 		&--domestic {
-			order: 4;
+			order: -3;
 		}
 
 		&--pack {
-			order: 6;
-		}
-
-		&:not(:nth-child(n+4)) {
-			margin-right: 77px;
+			order: -1;
+			padding-right: 30px;
 		}
 	}
 }
 
 @media @desktop-width {
 	.advantages {
-		padding-left: 225px;
+		padding-left: 19.5%;
+	}
+
+	.advantages__title {
+		padding-top: 97px;
 	}
 
 	.advantages__item {
+		width: 37.9%;
 
-		&:not(:nth-child(n+4)) {
-			margin-right: 94px;
+		&--scandinavian {
+			padding-right: 100px;
+		}
+
+		&--likes {
+			padding-right: 110px;
+		}
+
+		&--handemade {
+			padding-right: 80px;
 		}
 	}
 }

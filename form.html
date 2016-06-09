@@ -8,26 +8,22 @@
 	</head>
 	<body>
 		<header class="page-header">
-			<div class="page-header__logo  logo">
-				<a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка - магазин изделий ручной работы"></a>
-			</div>
-			<a class="page-header__open-toggle" href="#">Открыть меню</a>
-			<a class="page-header__close-toggle" href="#">Закрыть меню</a>
-      <nav class="main-nav">
-        <ul class="main-nav__list  main-nav__list--closed">
-          <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-          <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-          <li class="main-nav__item  main-nav__item--search"><a href="#">Поиск по сайту</a></li>
-          <li class="main-nav__item  main-nav__item--cart"><a href="#">Корзина: пока пуста</a></li>
-        </ul>
-      </nav>
-			<ul class="page-header__interest-list">
-				<li class="page-header__interest-item"><a href="#">Новые поступления</a></li>
-				<li class="page-header__interest-item"><a href="#">Распродажа</a></li>
-			</ul>
-			<div class="page-header__delivery">
-				<a href="#">Бесплатная доставка по России</a>
-			</div>
+			<div class="page-header__wrapper">
+        <a class="page-header__open-toggle" href="#">Открыть меню</a>
+        <a class="page-header__close-toggle" href="#">Закрыть меню</a>
+        <nav class="main-nav">
+          <ul class="main-nav__list  main-nav__list--closed">
+            <li class="main-nav__item  main-nav__item--logo  logo"><img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка - магазин изделий ручной работы"></li>
+            <li class="main-nav__item  main-nav__item--catalog"><a href="catalog.html">Каталог товаров</a></li>
+            <li class="main-nav__item  main-nav__item--order"><a href="form.html">Вязание на заказ</a></li>
+            <li class="main-nav__item  main-nav__item--search"><a href="#">Поиск по сайту</a></li>
+            <li class="main-nav__item  main-nav__item--cart"><a href="#">Корзина: пока пуста</a></li>
+            <li class="main-nav__item  main-nav__item--new"><a href="#">Новые поступления</a></li>
+            <li class="main-nav__item  main-nav__item--sale"><a href="#">Распродажа</a></li>
+            <li class="main-nav__item  main-nav__item--delivery"><span>Бесплатная доставка по России</span></li>
+          </ul>
+        </nav>
+      </div>
 		</header>
 		<main>
 			<div class="page-title  page-title--form">
@@ -104,15 +100,20 @@
 			</form>
 		</main>
 		<footer class="page-footer">
-			<div class="page-footer__social-links">
-				<a class="page-footer__social-link  page-footer__social-link--insta" href="#">Мы в Instagram</a>
-				<a class="page-footer__social-link  page-footer__social-link--fb" href="#">Мы в Facebook</a>
-				<a class="page-footer__social-link  page-footer__social-link--tw" href="#">Мы в Twitter</a>
+			<div class="page-footer__wrapper">
+				<div class="page-footer__logo  logo">
+					<img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка - магазин изделий ручной работы">
+				</div>
+	      <div class="page-footer__social-links">
+	        <a class="page-footer__social-link  page-footer__social-link--insta" href="#">Мы в Instagram</a>
+	        <a class="page-footer__social-link  page-footer__social-link--fb" href="#">Мы в Facebook</a>
+	        <a class="page-footer__social-link  page-footer__social-link--tw" href="#">Мы в Twitter</a>
+	      </div>
+	      <div class="page-footer__developer">
+	        <span>Разработано</span>
+	        <a class="page-footer__copyright-link" href="https://htmlacademy.ru">HTML Academy</a>
+	      </div>
 			</div>
-			<div class="page-footer__developer">
-				<span>Разработано</span>
-				<a class="page-footer__copyright-link" href="https://htmlacademy.ru">HTML Academy</a>
-			</div>
-		</footer>
+    </footer>
 	</body>
 </html>

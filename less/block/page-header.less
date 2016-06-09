@@ -1,25 +1,9 @@
-.page-header {
-	.container();
-
+.page-header__wrapper {
 	display: flex;
 	flex-direction: column;
+	min-width: 320px;
 	font-family: Verdana, Arial, sans-serif;
 }
-
-// .page-header__logo {
-// 	width: 320px;
-// 	padding-top: 21.5px;
-// 	padding-bottom: 21.5px;
-// 	border-top: 1px solid @lightgrey;
-// 	border-bottom: 1px solid @lightgrey;
-//
-// 	img {
-// 		display: block;
-// 		width: 86px;
-// 		height: 35px;
-// 		margin: 0 auto;
-// 	}
-// }
 
 .page-header__open-toggle {
 	position: absolute;
@@ -38,85 +22,25 @@
 	background: url("../img/icon-menu-close.svg") no-repeat 50% 50%;
 	background-size: 21px 20px;}
 
-.page-header__interest-list {
-	display: none;
-}
-
-.page-header__delivery {
-	display: none;
-}
-
 @media @tablet-width {
-	// .page-header__logo {
-	// 	width: 370px;
-	// 	padding-top: 26.5px;
-	// 	padding-bottom: 26.5px;
-	// 	padding-left: 48px;
-	// 	border-top: none;
-	//
-	// 	img {
-	// 		margin: 0;
-	// 	}
-	// }
+	.page-header__wrapper {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		min-width: 768px;
+	}
 
 	.page-header__open-toggle,
 	.page-header__close-toggle {
 		display: none;
 	}
-
-	.page-header__delivery {
-		align-self: flex-end;
-		display: flex;
-		margin-top: -50px;
-		margin-right: 50px;
-		margin-bottom: 25px;
-
-		a {
-			font-size: 14px;
-			text-decoration: none;
-			color: @darkgrey;
-		}
-	}
 }
 
 @media @desktop-width {
-	.page-header {
+	.page-header__wrapper {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
-	}
-
-	// .page-header__logo {
-	// 	width: auto;
-	// 	align-self: center;
-	// 	padding-left: 0;
-	// 	border-bottom: none;
-	// }
-
-	.page-header__interest-list {
-		display: flex;
-		flex-direction: row;
-		padding: 0;
-		padding-left: 50px;
-		margin: 0;
-		list-style: none;
-	}
-
-	.page-header__interest-item {
-		display: flex;
-		margin-right: 60px;
-		font-size: 14px;
-		font-weight: bold;
-
-		a {
-			padding-top: 23px;
-			padding-bottom: 23px;
-			text-decoration: none;
-			color: @black;
-		}
-	}
-
-	.page-header__delivery {
-		margin-top: 0;
+		min-width: 1150px;
 	}
 }

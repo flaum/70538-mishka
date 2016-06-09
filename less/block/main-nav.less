@@ -1,10 +1,12 @@
 .main-nav__list {
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	width: 320px;
+	min-width: 320px;
 	padding: 0;
 	margin: 0;
 	list-style: none;
+	z-index: 2;
 }
 
 .main-nav__item {
@@ -12,138 +14,212 @@
 	justify-content: center;
 	border-bottom: 1px solid @lightgrey;
 
+	a {
+		width: 100%;
+		padding-top: 27px;
+		padding-bottom: 27px;
+		padding-left: 23.75%;
+		font-weight: bold;
+		color: @black;
+		text-decoration: none;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: rgba(0, 0, 0, 0.6);
+		}
+
+		&:active {
+			color: rgba(0, 0, 0, 0.3);
+		}
+	}
+
 	&--logo {
-		width: 320px;
 		padding-top: 21.5px;
 		padding-bottom: 21.5px;
 		border-top: 1px solid @lightgrey;
 		border-bottom: 1px solid @lightgrey;
 	}
 
-	a {
-		padding-top: 27px;
-		padding-bottom: 27px;
-		font-weight: bold;
-		color: @black;
-		text-decoration: none;
+	&--new,
+	&--sale,
+	&--delivery {
+		display: none;
 	}
 }
 
 @media @tablet-width {
 	.main-nav__list {
-		justify-content: flex-start;
+		justify-content: space-between;
 		flex-direction: row;
 		flex-wrap: wrap;
-		width: 768px;
-		// padding-left: 50px;
+		width: 100%;
 	}
 
 	.main-nav__item {
 		justify-content: flex-start;
+		width: 26%;
 		font-size: 14px;
 		border-bottom: none;
 
-		a {
-			width: 145px;
+		a,
+		span {
+			padding-top: 18px;
+			padding-bottom: 18px;
+			text-align: left;
 		}
 
 		&--logo {
 			order: -3;
-			width: 370px;
+			width: 48%;
 			padding-top: 26.5px;
 			padding-bottom: 26.5px;
-			padding-left: 48px;
+			padding-left: 6.3%;
 			border-top: none;
 			border-bottom: 1px solid @lightgrey;
 		}
 
 		&--search {
-			// margin-top: -89px;
 			order: -2;
+			width: 11%;
 			font-size: 0;
 			border: 1px solid @lightgrey;
 			border-top: none;
 
 			a {
-				width: 82px;
 				padding-top: 32px;
 				padding-bottom: 32px;
 			}
 		}
 
 		&--cart {
-			// margin-top: -89px;
 			order: -1;
+			width: 41%;
+			font-size: 16px;
 			border-bottom: 1px solid @lightgrey;
 
 			a {
-				width: 314px;
 				padding-top: 32px;
-				padding-left: 77px;
+				padding-right: 50px;
 				padding-bottom: 32px;
-				font-size: 16px;
+				padding-left: 0;
+				text-align: right;
 			}
 		}
 
-		&:nth-child(2) {
-			padding-left: 50px;
-			margin-right: 16px;
+		&--catalog {
+
+			a {
+				padding-left: 50px;
+			}
+		}
+
+		&--order {
+
+			a {
+				padding-left: 18px;
+			}
+		}
+
+		&--delivery {
+			display: flex;
+			width: 48%;
+
+			span {
+				width: 100%;
+				padding-right: 50px;
+				font-weight: normal;
+				text-align: right;
+				color: @darkgrey;
+			}
 		}
 	}
 }
 
 @media @desktop-width {
+	.main-nav {
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+
 	.main-nav__list {
-		width: 1150px;
-		border-bottom: 1px solid @lightgrey;
+		justify-content: flex-start;
+		min-width: 1150px;
 	}
 
 	.main-nav__item {
 		font-size: 16px;
+		width: 20.7%;
 
 		a {
-			width: 238px;
 			padding-top: 32px;
 			padding-bottom: 32px;
 		}
 
 		&--logo {
 			order: 1;
-			width: auto;
-			padding-left: 0;
-			margin-right: 160px;
-			border-bottom: none;
+			width: 23.8%;
+			padding-left: 24px;
+		}
+
+		&--catalog {
+			border-bottom: 1px solid @lightgrey;
+		}
+
+		&--order {
+			border-left: 1px solid @lightgrey;
+			border-bottom: 1px solid @lightgrey;
+
+			a {
+				padding-left: 35px;
+			}
 		}
 
 		&--search {
 			order: 2;
+			width: 7.4%;
 			font-size: 0;
-			border-bottom: none;
-
-			a {
-				width: 82px;
-			}
 		}
 
 		&--cart {
 			order: 3;
-			border-bottom: none;
+			width: 27.3%
+		}
 
-			a {
-				width: 316px;
+		&--sale,
+		&--new,
+		&--delivery {
+
+			a,
+			span {
+				padding-top: 18px;
+				padding-bottom: 18px;
 			}
 		}
 
-		&:nth-child(2) {
-			margin-right: 35px;
-			border-right: 1px solid @lightgrey;
-		}
-
-		&:nth-child(3) {
+		&--new {
+			display: flex;
+			order: 4;
+			font-size: 14px;
 
 			a {
-				width: 180px;
+				padding-left: 50px;
 			}
+		}
+
+		&--sale {
+			display: flex;
+			order: 5;
+			font-size: 14px;
+
+			a {
+				padding-left: 36px;
+			}
+		}
+
+		&--delivery {
+			order: 6;
+			flex-grow: 1;
+			font-size: 14px;
 		}
 	}
 }

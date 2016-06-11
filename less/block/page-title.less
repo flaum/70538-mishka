@@ -1,28 +1,35 @@
 .page-title {
-	.container();
+	.container-adaptive();
 
-	padding-top: 73px;
-	padding-bottom: 73px;
-	margin-bottom: 30px;
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	background: @smokywhite;
 
 	h1 {
-		margin: 0;
-		font-size: 24px;
-		line-height: 30px;
-		font-weight: bold;
+		.title();
+
+		padding-top: 68px;
+		padding-bottom: 77px;
 	}
 }
 
 @media @tablet-width {
 	.page-title {
-		margin-top: -78px;
+		margin-top: -60px;
+
+		h1 {
+			padding-top: 91px;
+			padding-bottom: 102px;
+		}
 	}
 }
 
 @media @desktop-width {
 	.page-title {
-		margin-top: -70px;
+
+		h1 {
+			padding-top: 92px;
+		}
 	}
 }

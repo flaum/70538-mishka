@@ -1,40 +1,155 @@
 .advantages {
-	padding-top: 30px;
-	padding-bottom: 32px;
+	.container-adaptive();
+
+	display: flex;
+	flex-direction: column;
+	padding-left: 8.6%;
 }
 
 .advantages__title {
-	margin: 0;
-	margin-bottom: 30px;
-	font-size: 24px;
-	line-height: 30px;
-	font-weight: bold;
+	.title();
+
+	padding-top: 31px;
 }
 
 .advantages__list {
+	display: flex;
+	flex-direction: column;
 	margin: 0;
 	padding: 0;
+	padding-top: 29px;
+	padding-left: 2px;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: bold;
+	line-height: 20px;
 	list-style: none;
 }
 
 .advantages__item {
 	position: relative;
+	width: 75%;
 	padding-top: 55px;
+	padding-bottom: 28px;
 	font-weight: bold;
-	&:not(:last-child) {
-		padding-bottom: 35px;
+
+	&:last-child {
+		padding-bottom: 0;
 	}
+
 	&::before {
 		content: "";
 		position: absolute;
 		top: 0;
 		left: 10px;
 	}
-	&--ecology::before {
-		width: 32px;
-		height: 37px;
-		background: @aqua;
-		background-size: 32px 37px;
-		mask: url("../img/icon-feature-1.svg") no-repeat 50% 50%;
+
+	&--ecology {
+		width: 63%;
+
+		&::before{
+			top: 2px;
+			left: 8px;
+			width: 32px;
+			height: 37px;
+			background: @aqua;
+			background-size: 32px 37px;
+			mask: url("../img/icon-feature-1.svg") no-repeat 50% 50%;
+		}
+	}
+
+	&--likes {
+		width: 65%;
+	}
+
+	&--domestic {
+		width: 90%;
+	}
+}
+
+@media @tablet-width {
+	.advantages {
+		padding-left: 46px;
+		padding-bottom: 21px;
+	}
+
+	.advantages__title {
+		padding-top: 48px;
+	}
+
+	.advantages__list {
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-top: 47px;
+		padding-left: 4px;
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.advantages__item {
+		width: 46.5%;
+		padding-bottom: 50px;
+
+		&:last-child {
+			padding-bottom: 50px;
+		}
+
+		&--ecology {
+			order: -6;
+			padding-right: 100px;
+
+			&::before {
+					top: 3px;
+					left: 9px;
+			}
+		}
+
+		&--scandinavian {
+			order: -4;
+			padding-right: 50px;
+		}
+
+		&--likes {
+			order: -2;
+			padding-right: 90px;
+		}
+
+		&--handemade {
+			order: -5;
+		}
+
+		&--domestic {
+			order: -3;
+		}
+
+		&--pack {
+			order: -1;
+			padding-right: 30px;
+		}
+	}
+}
+
+@media @desktop-width {
+	.advantages {
+		padding-left: 222px;
+	}
+
+	.advantages__title {
+		padding-top: 97px;
+	}
+
+	.advantages__item {
+		width: 37.9%;
+
+		&--scandinavian {
+			padding-right: 90px;
+		}
+
+		&--likes {
+			padding-right: 110px;
+		}
+
+		&--handemade {
+			padding-right: 80px;
+		}
 	}
 }

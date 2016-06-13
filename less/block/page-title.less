@@ -1,12 +1,57 @@
 .page-title {
-	padding-top: 73px;
-	padding-bottom: 73px;
-	margin-bottom: 30px;
+	// .container-adaptive();
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	background: @smokywhite;
+
 	h1 {
-		margin: 0;
-		font-size: 24px;
-		line-height: 30px;
-		font-weight: bold;
+		.title();
+
+		padding-top: 68px;
+		padding-bottom: 77px;
+	}
+
+	&--form {
+
+		h1 {
+			padding-top: 75px;
+			padding-bottom: 82px;
+		}
+	}
+}
+
+@media @tablet-width {
+	.page-title {
+		margin-top: -60px;
+
+		h1 {
+			padding-top: 91px;
+			padding-bottom: 102px;
+		}
+
+		&--form {
+
+			h1 {
+				padding-bottom: 82px;
+			}
+		}
+	}
+}
+
+@media @desktop-width {
+	.page-title {
+
+		h1 {
+			padding-top: 92px;
+		}
+
+		&--form {
+
+			h1 {
+				padding-bottom: 102px;
+			}
+		}
 	}
 }

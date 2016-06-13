@@ -1,38 +1,136 @@
+.description {
+	background: #f9f9f9;
+}
+
+.description__wrapper {
+	.container-adaptive();
+
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
 .description__header {
-	padding-top: 104.5px;
-	padding-bottom: 104.5px;
-	background: #d6d7d1 url("../img/hero-mobile@1x.jpg") no-repeat 50% 50%;
+	display: flex;
+	align-self: stretch;
+	justify-content: center;
+	padding-top: 86px;
+	padding-bottom: 123px;
+	background: url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
 }
 
 .description__title {
-	margin: 0;
-	font-size: 24px;
-	font-weight: bold;
-	line-height: 30px;
+	.title();
+
+	width: 240px;
+	text-align: center;
 }
 
 .description__types-list {
 	padding: 0;
 	margin: 0;
+	font-family: Tahoma, Arial, sans-serif;
 	list-style: none;
 }
 
 .description__type {
+
 	a {
 		display: block;
-		padding-top: 27.5px;
-		padding-bottom: 27.5px;
-	}
-	&--home-goods {
-		background: @aqua;
-	}
-	&--toys {
-		background: #56c3b2;
-	}
-	a {
+		padding-top: 25px;
+		padding-bottom: 30px;
+		padding-left: 9%;
 		font-size: 18px;
 		font-weight: bold;
 		text-decoration: none;
 		color: @white;
+		transition: background 0.4s ease,
+								color 0.1s ease,
+								padding 0.4s ease,
+								margin 0.4s ease;
+
+		&:hover {
+			padding-bottom: 35px;
+			margin-top: -5px;
+		}
+
+		&:active {
+			color: rgba(255, 255, 255, 0.3);
+		}
+	}
+
+	&--home-goods {
+
+		a {
+			background-color: @aqua;
+
+			&:hover {
+				background: #59d5bc;
+			}
+		}
+	}
+
+	&--toys {
+
+		a {
+			background: #56c3b2;
+
+			&:hover {
+				background: #46c1ae;
+			}
+		}
+	}
+}
+
+@media @tablet-width {
+	.description__wrapper {
+		z-index: 1;
+		margin-top: -60px;
+	}
+
+	.description__header {
+		padding-top: 151px;
+		padding-bottom: 375px;
+	}
+
+	.description__title {
+		width: 500px;
+
+		br {
+			display: none;
+		}
+	}
+
+	.description__types-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.description__type {
+		width: 43.5%;
+
+		a {
+			width: 100%;
+			padding-top: 27px;
+			padding-left: 36px;
+			font-size: 20px;
+			line-height: 30px;
+		}
+	}
+}
+
+@media @desktop-width {
+	.description__type {
+		width: 45.65%;
+	}
+
+	.description__header {
+		padding-bottom: 361px;
+	}
+
+	.description__title	{
+		width: 690px;
 	}
 }

@@ -12,7 +12,14 @@ body {
 }
 
 .visualy-hidden {
-	display: none;;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 .btn() {
@@ -26,7 +33,9 @@ body {
 	text-decoration: none;
 	text-transform: uppercase;
 	color: @darkgrey;
+	background: @white;
 	border: 2px solid @darkgrey;
+	outline: none;
 	transition: color 0.3s ease,
 							background 0.3s ease;
 

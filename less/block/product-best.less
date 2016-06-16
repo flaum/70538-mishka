@@ -1,12 +1,18 @@
-.product-best__wrapper {
+.product-best {
+	background-image: url("../img/bg-zigzag-line.svg");
+	background-repeat: repeat-x;
+	background-position: 1px bottom;
+	background-size: auto 6px;
+}
 
+.product-best__wrapper {
 	.container-adaptive();
 
 	display: flex;
 	flex-direction: column;
 	padding-left: 9.3%;
 	padding-right: 9.3%;
-	padding-bottom: 40px;
+	padding-bottom: 41px;
 	box-sizing: border-box;
 }
 
@@ -18,7 +24,7 @@
 .product-best__title {
 	.title();
 
-	padding-bottom: 2px;
+	padding-bottom: 3px;
 }
 
 .product-best__week-best {
@@ -29,7 +35,6 @@
 }
 
 .product-best__description {
-	// width: 79.7%;
 	margin: 0;
 	padding-bottom: 18px;
 	font-size: 14px;
@@ -59,11 +64,14 @@
 	align-self: center;
 	padding-top: 27px;
 	padding-bottom: 24px;
-	width: 260px;
-	height: 315px;
 	line-height: 0;
 	text-align: center;
 	box-sizing: content-box;
+
+	img {
+		width: 260px;
+		height: 315px;
+	}
 }
 
 .product-best__price {
@@ -84,11 +92,16 @@
 }
 
 @media @tablet-width {
+	.product-best {
+		background-position: 0 bottom;
+		background-size: auto 15px;
+	}
+
 	.product-best__wrapper {
 		position: relative;
-		padding-left: 5.9%;
+		padding-left: 5.7%;
 		padding-right: 6.6%;
-		padding-bottom: 69px;
+		padding-bottom: 68px;
 	}
 
 	.product-best__header {
@@ -96,7 +109,7 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		padding-top: 45px;
+		padding-top: 44px;
 		padding-bottom: 48px;
 	}
 
@@ -127,14 +140,17 @@
 
 	.product-best__photo {
 		position: absolute;
-		bottom: 69px;
+		bottom: 68px;
 		right: 51px;
 		z-index: -1;
 		padding: 0;
 		margin: 0;
-		width: 333px;
-		height: 404px;
 		background: @aqua;
+
+		img {
+			width: 333px;
+			height: 404px;
+		}
 	}
 
 	.product-best__price {
@@ -154,9 +170,13 @@
 }
 
 @media @desktop-width {
+	.product-best {
+		background-size: auto;
+	}
+
 	.product-best__wrapper {
 		padding-right: 76px;
-		padding-bottom: 57px;
+		padding-bottom: 95px;
 		padding-left: 222px;
 	}
 
@@ -182,10 +202,13 @@
 
 	.product-best__photo {
 		right: 50px;
-		bottom: 57px;
-		width: 525px;
-		height: 636px;
+		bottom: 95px;
 		background: @aqua;
+
+		img {
+			width: 525px;
+			height: 636px;
+		}
 	}
 
 	.product-best__price {

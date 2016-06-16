@@ -50,19 +50,6 @@ body {
 	}
 }
 
-.container() {
-	width: 320px;
-	margin: 0 auto;
-
-	@media @tablet-width {
-		width: 768px;
-	}
-
-	@media @desktop-width {
-		width: 1150px;
-	}
-}
-
 .container-adaptive() {
 	min-width: 320px;
 	max-width: 500px;
@@ -95,13 +82,5 @@ body {
 	@media @desktop-width {
 		font-size: 50px;
 		line-height: 57px;
-	}
-}
-
-.clearfix() {
-	&::after {
-		content: "";
-		display: table;
-		clear: both;
 	}
 }

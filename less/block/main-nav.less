@@ -1,3 +1,7 @@
+.main-nav {
+	flex-grow: 1;
+}
+
 .main-nav__list {
 	position: relative;
 	display: flex;
@@ -11,14 +15,14 @@
 
 .main-nav__item {
 	display: flex;
-	justify-content: center;
+	// justify-content: center;
 	border-bottom: 1px solid @lightgrey;
 
 	a {
 		width: 100%;
-		padding-top: 27px;
-		padding-bottom: 27px;
-		padding-left: 23.75%;
+		padding-top: 26px;
+		padding-bottom: 28px;
+		padding-left: 23.25%;
 		font-weight: bold;
 		color: @black;
 		text-decoration: none;
@@ -34,10 +38,71 @@
 	}
 
 	&--logo {
-		padding-top: 21.5px;
-		padding-bottom: 21.5px;
+		padding-top: 20px;
+		padding-bottom: 22px;
+		padding-left: 36.25%;
 		border-top: 1px solid @lightgrey;
 		border-bottom: 1px solid @lightgrey;
+
+		a {
+			width: auto;
+			padding: 0;
+			transition: opacity 0.3s ease;
+
+			&:hover {
+				opacity: 0.6;
+			}
+
+			&:active {
+				opacity: 0.3;
+			}
+		}
+	}
+
+	&--search {
+		position: relative;
+
+		&::before {
+			content: url('data:image/svg+xml, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve"><path fill="#d3d2d2" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/></svg>');
+			position: absolute;
+			top: 30px;
+			left: 10%;
+			display: block;
+			width: 17.6px;
+			height: 17.6px;
+			cursor: pointer;
+		}
+
+		&:hover::before {
+			content: url('data:image/svg+xml, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve"><path fill="#63d1bb" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/></svg>');
+		}
+
+		&:active::before {
+			content: url('data:image/svg+xml, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve"><path fill="#d0f1ea" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/></svg>');
+		}
+	}
+
+	&--cart {
+		position: relative;
+
+		&::before {
+			content: url('data:image/svg+xml, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve"><path fill="#d3d2d2" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739l-0.81-2.836h15.359L281.222,382.526z"/></svg>');
+			position: absolute;
+			top: 29px;
+			left: 9.6%;
+			display: block;
+			width: 20.3px;
+			height: 18.9px;
+			cursor: pointer;
+		}
+
+		&:hover::before {
+			content: url('data:image/svg+xml, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve"><path fill="#63d1bb" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739l-0.81-2.836h15.359L281.222,382.526z"/></svg>');
+		}
+
+		&:active::before {
+			content: url('data:image/svg+xml, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve"><path fill="#d0f1ea" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739l-0.81-2.836h15.359L281.222,382.526z"/></svg>');
+		}
 	}
 
 	&--new,
@@ -52,7 +117,9 @@
 		justify-content: space-between;
 		flex-direction: row;
 		flex-wrap: wrap;
-		width: 100%;
+		// flex-grow: 1;
+		flex-basis: 50%;
+		// width: 100%;
 	}
 
 	.main-nav__item {
@@ -70,17 +137,27 @@
 
 		&--logo {
 			order: -3;
-			width: 48%;
-			padding-top: 26.5px;
-			padding-bottom: 26.5px;
-			padding-left: 6.3%;
+			width: 48.2%;
+			padding-top: 22px;
+			padding-bottom: 20px;
+			padding-left: 6.25%;
 			border-top: none;
 			border-bottom: 1px solid @lightgrey;
+
+			a {
+				width: auto;
+				padding: 0;
+			}
+
+			img {
+				width: 112px;
+				height: 46px;
+			}
 		}
 
 		&--search {
 			order: -2;
-			width: 11%;
+			width: 10.94%;
 			font-size: 0;
 			border: 1px solid @lightgrey;
 			border-top: none;
@@ -89,20 +166,30 @@
 				padding-top: 32px;
 				padding-bottom: 32px;
 			}
+
+			&::before {
+				top: 36.5px;
+				left: 40%;
+			}
 		}
 
 		&--cart {
 			order: -1;
-			width: 41%;
+			width: 40.86%;
 			font-size: 16px;
 			border-bottom: 1px solid @lightgrey;
 
 			a {
-				padding-top: 32px;
+				padding-top: 31px;
 				padding-right: 50px;
-				padding-bottom: 32px;
+				padding-bottom: 33px;
 				padding-left: 0;
 				text-align: right;
+			}
+
+			&::before {
+				top: 35px;
+				left: 10%;
 			}
 		}
 
@@ -156,15 +243,27 @@
 		&--cart {
 
 			a {
-				padding-top: 32px;
-				padding-bottom: 32px;
+				padding-top: 31px;
+				padding-bottom: 33px;
 			}
 		}
 
 		&--logo {
 			order: -6;
 			width: 23.8%;
+			padding-top: 7.5px;
+			padding-bottom: 7.5px;
 			padding-left: 24px;
+
+			a {
+				width: auto;
+				padding: 0;
+			}
+
+			img {
+				width: 148px;
+				height: 73px;
+			}
 		}
 
 		&--catalog {

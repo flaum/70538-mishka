@@ -9,49 +9,46 @@
 	h1 {
 		.title();
 
-		padding-top: 68px;
+		padding-top: 69px;
 		padding-bottom: 77px;
 	}
 
-	&--form {
-
-		h1 {
-			padding-top: 75px;
-			padding-bottom: 82px;
-		}
+	&--form h1 {
+		padding-top: 74px;
+		padding-bottom: 82px;
 	}
 }
 
 @media @tablet-width {
 	.page-title {
 		margin-top: -60px;
+		background-image: url("../img/bg-zigzag-fill.svg");
+		background-repeat: repeat-x;
+		background-position: 0 bottom;
+		background-size: auto 23px;
 
 		h1 {
 			padding-top: 91px;
-			padding-bottom: 102px;
+			padding-bottom: 95px;
 		}
 
-		&--form {
-
-			h1 {
-				padding-bottom: 82px;
-			}
+		&--form h1 {
+			padding-bottom: 95px;
 		}
 	}
 }
 
 @media @desktop-width {
 	.page-title {
+		background-size: auto;
 
 		h1 {
 			padding-top: 92px;
+			padding-bottom: 121px;
 		}
 
-		&--form {
-
-			h1 {
-				padding-bottom: 102px;
-			}
+		&--form h1 {
+			padding-bottom: 122px;
 		}
 	}
 }

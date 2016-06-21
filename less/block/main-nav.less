@@ -1,5 +1,52 @@
 .main-nav {
+	position: relative;
 	flex-grow: 1;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+	position: absolute;
+	content: url('data:image/svg+xml, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.958px" height="14px" viewBox="0 0 19.958 14" enable-background="new 0 0 19.958 14" xml:space="preserve"> <rect fill="#231F20" width="19.958" height="2"/> <rect y="6" fill="#231F20" width="19.958" height="2"/> <rect y="12" fill="#231F20" width="19.958" height="2"/> </svg> ');
+	top: 8px;
+	left: 5px;
+	z-index: 13;
+	width: 20px;
+	height: 14px;
+	transition: opacity 0.3s ease;
+}
+
+.main-nav--opened .main-nav__toggle::before {
+	content: url('data:image/svg+xml, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.514px" height="20.512px" viewBox="0 0 20.514 20.512" enable-background="new 0 0 20.514 20.512" xml:space="preserve"> <polygon fill="#231F20" points="20.513,1.414 19.099,0 10.256,8.842 1.414,0 0,1.414 8.842,10.256 0,19.098 1.414,20.512 10.256,11.67 19.099,20.512 20.513,19.098 11.671,10.256 "/> </svg>');
+	top: 0;
+	right: 0;
+	width: 21px;
+	height: 21px;
+}
+
+.main-nav--opened .main-nav__item {
+	opacity: 1;
+}
+
+.main-nav__toggle {
+	position: absolute;
+	top: 23px;
+	right: 26px;
+	z-index: 11;
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	font-size: 0;
+	line-height: 0;
+	background: none;
+	border: none;
+	outline: none;
+
+	&:hover {
+		opacity: 0.6;
+	}
+
+	&:active {
+		opacity: 0.3;
+	}
 }
 
 .main-nav__list {
@@ -14,9 +61,10 @@
 }
 
 .main-nav__item {
+	position: relative;
 	display: flex;
-	// justify-content: center;
 	border-bottom: 1px solid @lightgrey;
+	transition: transform 0.7s ease;
 
 	a {
 		width: 100%;
@@ -43,6 +91,7 @@
 		padding-left: 36.25%;
 		border-top: 1px solid @lightgrey;
 		border-bottom: 1px solid @lightgrey;
+		line-height: 0;
 
 		a {
 			width: auto;
@@ -112,18 +161,48 @@
 	}
 }
 
+@media @mobile-width-only {
+	.main-nav--closed .main-nav__item {
+		position: absolute;
+		transform: scale(0);
+		transition: none;
+
+		&--logo {
+			position: relative;
+			transform: scale(1);
+		}
+	}
+
+	.main-nav--nojs .main-nav__toggle {
+		display: none;
+	}
+
+	.main-nav--nojs .main-nav__item {
+		display: flex;
+
+		&--new,
+		&--sale,
+		&--delivery {
+			display: none;
+		}
+	}
+}
+
 @media @tablet-width {
+	.main-nav__toggle {
+		display: none;
+	}
+
 	.main-nav__list {
 		justify-content: space-between;
 		flex-direction: row;
 		flex-wrap: wrap;
-		// flex-grow: 1;
 		flex-basis: 50%;
-		// width: 100%;
 	}
 
 	.main-nav__item {
 		justify-content: flex-start;
+		align-items: flex-start;
 		width: 26%;
 		font-size: 14px;
 		border-bottom: none;
@@ -139,7 +218,7 @@
 			order: -3;
 			width: 48.2%;
 			padding-top: 22px;
-			padding-bottom: 20px;
+			padding-bottom: 13px;
 			padding-left: 6.25%;
 			border-top: none;
 			border-bottom: 1px solid @lightgrey;
@@ -249,10 +328,11 @@
 		}
 
 		&--logo {
+			align-self: flex-start;
 			order: -6;
 			width: 23.8%;
-			padding-top: 7.5px;
-			padding-bottom: 7.5px;
+			padding-top: 8.5px;
+			padding-bottom: 6px;
 			padding-left: 24px;
 
 			a {

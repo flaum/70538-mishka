@@ -19,6 +19,7 @@
     "css-mqpacker": "^5.0.1",
     "del": "^2.2.1",
     "editorconfig-tools": "0.1.1",
+    "graceful-fs": "^4.1.4",
     "gulp": "3.9.1",
     "gulp-csso": "^2.0.0",
     "gulp-imagemin": "^3.0.1",

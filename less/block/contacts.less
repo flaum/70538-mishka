@@ -28,30 +28,30 @@
 	justify-content: space-between;
 	max-width: 300px;
 	padding-bottom: 29px;
+}
 
-	a {
-		color: @black;
-		text-decoration: none;
-		transition: color 0.3s ease;
+.contacts__e-mail-link {
+	color: @black;
+	text-decoration: none;
+	transition: color 0.3s ease;
+
+	span {
+		transition: border-color 0.3s ease;
+	}
+
+	&:hover {
+		color: rgba(70, 193, 174, 1);
 
 		span {
-			transition: border-color 0.3s ease;
+			border-color: #46c1ae;
 		}
+	}
 
-		&:hover {
-			color: rgba(70, 193, 174, 1);
+	&:active {
+		color: rgba(70, 193, 174, 0.3);
 
-			span {
-				border-color: #46c1ae;
-			}
-		}
-
-		&:active {
-			color: rgba(70, 193, 174, 0.3);
-
-			span {
-				border-color: #ecf9f7;
-			}
+		span {
+			border-color: #ecf9f7;
 		}
 	}
 }

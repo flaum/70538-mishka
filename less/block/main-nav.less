@@ -23,6 +23,7 @@
 }
 
 .main-nav--opened .main-nav__item {
+	top: 0;
 	opacity: 1;
 }
 
@@ -164,6 +165,7 @@
 @media @mobile-width-only {
 	.main-nav--closed .main-nav__item {
 		position: absolute;
+		top: -1000px;
 		transform: scale(0);
 		transition: none;
 

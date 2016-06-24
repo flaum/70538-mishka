@@ -2,25 +2,8 @@
 	display: flex;
 	flex-direction: column;
 	min-width: 320px;
-	font-family: Verdana, Arial, sans-serif;
+	font-family: "Verdana", Arial, sans-serif;
 }
-
-.page-header__open-toggle {
-	position: absolute;
-	width: 20px;
-	height: 14px;
-	font-size: 0;
-	background: url("../img/icon-menu-open.svg") no-repeat 50% 50%;
-	background-size: 20px 14px;
-}
-
-.page-header__close-toggle {
-	position: absolute;
-	width: 21px;
-	height: 20px;
-	font-size: 0;
-	background: url("../img/icon-menu-close.svg") no-repeat 50% 50%;
-	background-size: 21px 20px;}
 
 @media @tablet-width {
 	.page-header__wrapper {
@@ -28,11 +11,6 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		min-width: 768px;
-	}
-
-	.page-header__open-toggle,
-	.page-header__close-toggle {
-		display: none;
 	}
 }
 

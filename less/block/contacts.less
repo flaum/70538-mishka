@@ -28,30 +28,30 @@
 	justify-content: space-between;
 	max-width: 300px;
 	padding-bottom: 29px;
+}
 
-	a {
-		color: @black;
-		text-decoration: none;
-		transition: color 0.3s ease;
+.contacts__e-mail-link {
+	color: @black;
+	text-decoration: none;
+	transition: color 0.3s ease;
+
+	span {
+		transition: border-color 0.3s ease;
+	}
+
+	&:hover {
+		color: rgba(70, 193, 174, 1);
 
 		span {
-			transition: border-color 0.3s ease;
+			border-color: #46c1ae;
 		}
+	}
 
-		&:hover {
-			color: rgba(70, 193, 174, 1);
+	&:active {
+		color: rgba(70, 193, 174, 0.3);
 
-			span {
-				border-color: #46c1ae;
-			}
-		}
-
-		&:active {
-			color: rgba(70, 193, 174, 0.3);
-
-			span {
-				border-color: #ecf9f7;
-			}
+		span {
+			border-color: #ecf9f7;
 		}
 	}
 }
@@ -78,9 +78,51 @@
 }
 
 .contacts__map {
+	position: relative;
+	display: flex;
+	justify-content: center;
 	padding-bottom: 39px;
 	line-height: 0;
 	text-align: center;
+
+	&::before {
+		display: none;
+	}
+
+	picture {
+		display: none;
+	}
+
+	iframe {
+	 	display: flex;
+		flex-grow: 1;
+		width: 320px;
+		height: 457px;
+	}
+
+	&--nojs {
+
+		picture {
+			display: flex;
+		}
+
+		iframe {
+			display: none;
+		}
+
+		&::before {
+			position: absolute;
+			top: 165px;
+			left: 38.48%;
+			z-index: 20;
+			content: "";
+			display: block;
+			width: 66px;
+			height: 101px;
+			background: url("../img/icon-map-pin.svg") no-repeat 50% 50%;
+			background-size: 66px 101px;
+		}
+	}
 }
 
 .contacts__write-us-btn {
@@ -108,11 +150,15 @@
 		padding-top: 59px;
 
 		&::after {
-			content: url('data:image/svg+xml, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.68px" height="81.691px" viewBox="-11.34 -28.346 46.68 81.691" enable-background="new -11.34 -28.346 46.68 81.691" xml:space="preserve"><g id="miu"><g id="Artboard-1" transform="translate(-755.000000, -443.000000)"><g id="slice" transform="translate(215.000000, 119.000000)"></g><g id="editor-flag-triangle-notification-glyph"><path fill="#63D1BB" d="M751.439,418.545v38.9l38.9-19.451L751.439,418.545z M743.66,496.346v-81.691h3.805v81.691H743.66z"/></g></g></g><g><rect x="-11.34" y="-28.346" fill="#231F20" width="3.805" height="81.691"/></g></svg>');
+			content: "";
 			position: absolute;
 			top: 47px;
 			right: 3px;
 			display: block;
+			width: 46.7px;
+			height: 81.7px;
+			background: url("../img/icon-flag.svg") no-repeat 50% 50%;
+			background-size: 46.7px 81.7px;
 		}
 	}
 
@@ -151,7 +197,16 @@
 	.contacts__map {
 		padding-bottom: 55px;
 
+		&::before {
+			left: 45.18%;
+		}
+
 		img {
+			width: 768px;
+			height: 457px;
+		}
+
+		iframe {
 			width: 768px;
 			height: 457px;
 		}
@@ -167,7 +222,7 @@
 	.contacts {
 		flex-wrap: wrap;
 		justify-content: flex-start;
-		max-height: 900px;
+		height: 633px;
 		padding-bottom: 105px;
 	}
 
@@ -222,7 +277,16 @@
 		margin-bottom: 0;
 		box-sizing: content-box;
 
+		&::before {
+			top: 237px;
+		}
+
 		img {
+			width: 525px;
+			height: 457px;
+		}
+
+		iframe {
 			width: 525px;
 			height: 457px;
 		}

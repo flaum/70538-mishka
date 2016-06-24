@@ -96,12 +96,18 @@
 							<span>Фио</span>
 						</div>
 						<div class="order-form__options  order-form__options--full-name">
-							<label for="surname">Фамилия:</label>
-							<input type="text" name="surname" id="surname" placeholder="Укажите фамилию" required>
-							<label for="name">Имя:</label>
-							<input type="text" name="name" id="name" placeholder="Введите ваше имя" required>
-							<label for="fathers-name">Отчество:</label>
-							<input type="text" name="fathers-name" id="fathers-name" placeholder="Отчество, если желаете">
+							<div class="order-form__full-name-option-wrapper">
+								<label class="order-form__surname-label" for="surname">Фамилия:</label>
+								<input type="text" name="surname" id="surname" placeholder="Укажите фамилию" required>
+							</div>
+							<div class="order-form__full-name-option-wrapper">
+								<label class="order-form__name-label" for="name">Имя:</label>
+								<input type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+							</div>
+							<div class="order-form__full-name-option-wrapper">
+								<label class="order-form__fathers-name-label" for="fathers-name">Отчество:</label>
+								<input type="text" name="fathers-name" id="fathers-name" placeholder="Отчество, если желаете">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -126,7 +132,7 @@
 						<div class="order-form__options  order-form__options--e-mail">
 							<div class="order-form__option-wrapper">
 								<input type="email" name="e-mail" placeholder="Ваш e-mail" required>
-								<svg class="order-form__e-mail-icon" width="24.8" height="24.3">
+								<svg class="order-form__e-mail-icon" width="32" height="32">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-mail"></use>
 								</svg>
 							</div>

@@ -61,7 +61,7 @@
 
 	label {
 		position: relative;
-		font-family: Verdana, Arial, sans-serif;
+		font-family: "Verdana", Arial, sans-serif;
 		font-weight: bold;
 		line-height: 19px;
 		cursor: pointer;
@@ -70,7 +70,7 @@
 	input {
 		padding-top: 17px;
 		padding-bottom: 17px;
-		font-family: Verdana, Arial, sans-serif;
+		font-family: "Verdana", Arial, sans-serif;
 		line-height: 19px;
 		background: transparent;
 		border: none;
@@ -105,7 +105,7 @@
 
 	textarea {
 		padding: 15px;
-		font-family: Verdana, Arial, sans-serif;
+		font-family: "Verdana", Arial, sans-serif;
 		line-height: 19px;
 		border: 2px solid @darkgrey;
 		outline: none;
@@ -274,16 +274,13 @@
 	&--full-name {
 		display: flex;
 		flex-wrap: wrap;
-		padding-top: 31px;
+		padding-top: 8px;
 		padding-right: 30px;
 		padding-bottom: 32px;
 
 		label {
 			flex-basis: 100%;
-
-			&:not(:first-child) {
-				padding-top: 22.5px;
-			}
+			padding-top: 22.5px;
 		}
 
 		input {
@@ -327,6 +324,18 @@
 	}
 }
 
+.order-form__full-name-option-wrapper {
+	flex-basis: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.order-form__surname-label {
+	padding-top: 0;
+}
+
 .order-form__option-wrapper {
 	flex-basis: 100%;
 	display: flex;
@@ -351,21 +360,10 @@
 		fill: @form-aqua;
 		opacity: 1;
 	}
-
-	// &::after {
-	// 	content: url('data:image/svg+xml, <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24.829px" height="24.333px" viewBox="0 0 24.829 24.333" enable-background="new 0 0 24.829 24.333" xml:space="preserve"> <g> <g id="UrwUhy_2_"> <g> <path fill="#c1c1c1" d="M17.321,24.333c-0.371,0-0.744,0-1.115,0c-4.904-0.58-8.497-2.857-11.11-5.772C2.473,15.637,0.402,11.875,0,6.817 c0-0.453,0-0.906,0-1.358c0.091-0.921,0.544-1.55,1.067-2.086c0.65-0.666,1.63-1.522,2.522-1.553 c0.659-0.022,1.78,0.451,2.232,1.066c0.388,0.53,0.595,1.59,0.775,2.378c0.185,0.797,0.6,1.95,0.485,2.717 C6.905,9.177,5.317,9.684,4.85,10.553c1.551,3.721,4.089,6.456,7.472,8.345c0.847-0.465,1.595-1.864,2.767-1.892 c0.428-0.012,0.972,0.209,1.406,0.34c0.477,0.143,0.891,0.326,1.311,0.484c0.705,0.266,1.957,0.621,2.378,1.213 c0.433,0.61,0.681,1.608,0.581,2.231C20.571,22.508,18.538,23.877,17.321,24.333z"/> </g> </g> <path fill="#c1c1c1" d="M12.529,1.528c5.949,0,10.771,4.822,10.771,10.771h1.529C24.829,5.507,19.323,0,12.529,0V1.528z"/> <path fill="#c1c1c1" d="M12.529,9.327v1.552c0.785,0,1.421,0.636,1.421,1.42h1.553C15.502,10.657,14.172,9.327,12.529,9.327z"/> <path fill="#c1c1c1" d="M12.529,6.246c3.345,0,6.056,2.71,6.056,6.054h1.588c0-4.22-3.422-7.641-7.644-7.641V6.246z"/> </g> </svg>');
-	// 	position: absolute;
-	// 	top: 12px;
-	// 	right: 8px;
-	// }
-	//
-	// &:hover::after {
-	// 	content: url('data:image/svg+xml, <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24.829px" height="24.333px" viewBox="0 0 24.829 24.333" enable-background="new 0 0 24.829 24.333" xml:space="preserve"> <g> <g id="UrwUhy_2_"> <g> <path fill="@form-aqua" d="M17.321,24.333c-0.371,0-0.744,0-1.115,0c-4.904-0.58-8.497-2.857-11.11-5.772C2.473,15.637,0.402,11.875,0,6.817 c0-0.453,0-0.906,0-1.358c0.091-0.921,0.544-1.55,1.067-2.086c0.65-0.666,1.63-1.522,2.522-1.553 c0.659-0.022,1.78,0.451,2.232,1.066c0.388,0.53,0.595,1.59,0.775,2.378c0.185,0.797,0.6,1.95,0.485,2.717 C6.905,9.177,5.317,9.684,4.85,10.553c1.551,3.721,4.089,6.456,7.472,8.345c0.847-0.465,1.595-1.864,2.767-1.892 c0.428-0.012,0.972,0.209,1.406,0.34c0.477,0.143,0.891,0.326,1.311,0.484c0.705,0.266,1.957,0.621,2.378,1.213 c0.433,0.61,0.681,1.608,0.581,2.231C20.571,22.508,18.538,23.877,17.321,24.333z"/> </g> </g> <path fill="@form-aqua" d="M12.529,1.528c5.949,0,10.771,4.822,10.771,10.771h1.529C24.829,5.507,19.323,0,12.529,0V1.528z"/> <path fill="@form-aqua" d="M12.529,9.327v1.552c0.785,0,1.421,0.636,1.421,1.42h1.553C15.502,10.657,14.172,9.327,12.529,9.327z"/> <path fill="@form-aqua" d="M12.529,6.246c3.345,0,6.056,2.71,6.056,6.054h1.588c0-4.22-3.422-7.641-7.644-7.641V6.246z"/> </g> </svg>');
-	// }
 }
 
 .order-form__phone-icon {
-	content: '';
+	content: "";
 	position: absolute;
 	top: 12px;
 	right: 8px;
@@ -377,13 +375,13 @@
 }
 
 .order-form__e-mail-icon {
-	content: '';
+	content: "";
 	position: absolute;
 	top: 12px;
 	right: 4px;
 	display: block;
-	width: 24.8px;
-	height: 24.3px;
+	width: 32px;
+	height: 32px;
 	transition: opacity 0.3s ease,
 							fill 0.3s ease;
 }
@@ -546,8 +544,9 @@
 
 		&--full-name {
 			display: flex;
+			flex-basis: 60%;
+			flex-grow: 1;
 			align-items: baseline;
-			max-width: 780px;
 			padding-top: 0;
 			padding-right: 50px;
 			padding-bottom: 47px;
@@ -556,15 +555,12 @@
 			label {
 				flex-basis: auto;
 				padding-right: 23px;
-				padding-bottom: 39px;
-
-				&:not(:first-child) {
-					padding-top: 0;
-				}
+				// padding-bottom: 39px;
+				padding-top: 0;
 			}
 
 			input {
-				flex-basis: 70%;
+				// flex-basis: 68%;
 				flex-grow: 1;
 			}
 		}
@@ -598,6 +594,16 @@
 			padding-left: 99px;
 			flex-grow: 1;
 		}
+	}
+
+	.order-form__full-name-option-wrapper {
+		flex-wrap: nowrap;
+		align-items: baseline;
+		padding-bottom: 20px;
+	}
+
+	.order-form__surname-label {
+		padding-top: 0;
 	}
 
 	.order-form__phone-icon {
@@ -698,21 +704,14 @@
 		}
 
 		&--full-name {
-			max-width: none;
+			width: auto;
 			padding-top: 2px;
 			padding-right: 225px;
 			padding-left: 45px;
+			padding-bottom: 48px;
 
 			input {
-				flex-basis: 80%;
-			}
-
-			label:nth-child(3) {
-				padding-bottom: 37px;
-			}
-
-			label:nth-child(5) {
-				padding-right: 24px;
+				// flex-basis: 75%;
 			}
 		}
 
@@ -736,6 +735,18 @@
 				padding-bottom: 17px;
 			}
 		}
+	}
+
+	.order-form__full-name-option-wrapper {
+		padding-bottom: 19px;
+	}
+
+	.order-form-name-label {
+		padding-bottom: 37px;
+	}
+
+	.order-form__fathers-name-label {
+		padding-right: 24px;
 	}
 
 	.order-form__phone-icon {
